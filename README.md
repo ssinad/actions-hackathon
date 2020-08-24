@@ -36,7 +36,7 @@ Wacky Wildcards
 
 
 ### Yaml File or Link to Code
-`{% github https://github.com/ssinad/actions-hackathon %}`
+{% github https://github.com/ssinad/actions-hackathon %}
 
 
 ### Additional Resources / Info
