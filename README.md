@@ -1,5 +1,4 @@
 # Compile LaTeX Documents and Upload to Google Drive
-actionshackathon, github, opensource, googlecloud, latex
 
 ## My Workflow
 I wrote this workflow to keep a history of a latex document I was working on. I also wanted the document to be synced with my Google drive without me having to manually upload it every time I made a change.
@@ -33,11 +32,6 @@ However, it should be good enough to get the job done.
 
 ### Submission Category: 
 Wacky Wildcards
-
-
-### Yaml File or Link to Code
-{% github https://github.com/ssinad/actions-hackathon %}
-
 
 ### Additional Resources / Info
 
