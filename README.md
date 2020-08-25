@@ -1,9 +1,9 @@
 # Compile LaTeX Documents and Upload to Google Drive
 
-## My Workflow
+### My Workflow
 I wrote this workflow to keep a history of a latex document I was working on. I also wanted the document to be synced with my Google drive without me having to manually upload it every time I made a change.
 
-## Prerequisites
+### Prerequisites
 * A Google [service account](https://cloud.google.com/iam/docs/service-accounts)
 * An encryption tool such as `gpg`
 * Google drive file ID (The file must be shared with the email associated with the service account)
