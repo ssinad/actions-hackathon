@@ -15,7 +15,8 @@ jobs:
 
     - name: Compile Latex Documents
       run: |
-        sudo apt-get install -vy texlive latexmk
+        sudo apt-get install -vy texlive
+        sudo apt-get install -y latexmk
         latexmk -cd -pdf hello_world.tex
 
     - name: Save Artifact
