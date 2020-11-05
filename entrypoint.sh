@@ -1,3 +1,3 @@
 #!/bin/sh
 
-latexmk -cd -pdf $1.tex
+latexmk -cd -pdf -silent -usepretex='\providecommand{\finalOption}{final}' $1.tex
