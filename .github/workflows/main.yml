@@ -12,11 +12,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    # - uses: actions/cache@v2
 
+    - name: Login to GitLab
+      uses: docker/login-action@v1
+      with:
+        registry: registry.gitlab.com
+        username: ${{ secrets.GITLAB_USERNAME }}
+        password: ${{ secrets.GITLAB_PASSWORD }}
     - name: Compile Latex Documents
-      run: |
-        sudo apt-get install -y texlive latexmk
-        latexmk -cd -pdf hello_world.tex
+      uses: ./
+      id: typeset
+      with:
+        file: 'hello_world'
+
+    # - name: Compile Latex Documents
+    #   run: |
+    #     sudo apt-get install -y texlive latexmk
+    #     latexmk -cd -pdf hello_world.tex
 
     - name: Save Artifact
       uses: actions/upload-artifact@v2
