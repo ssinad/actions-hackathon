@@ -1,4 +1,4 @@
-FROM FROM pandoc/alpine-latex:2.11.0.4
+FROM pandoc/alpine-latex:2.11.0.4
 
 RUN tlmgr install latexmk
 
