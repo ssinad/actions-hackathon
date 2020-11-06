@@ -60,7 +60,7 @@ jobs:
       with:
         filename: 'hello_world.pdf'
         file_id: $FILE_ID
-        my_secret: $GITHUB_WORKSPACE/secrets/my_secret.json
+        my_secret: /github/workspace/secrets/my_secret.json
       # run: |
       #   pip3 install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
       #   python3 ./gdrive-update.py $HOME/secrets/my_secret.json $FILE_ID  hello_world.pdf
