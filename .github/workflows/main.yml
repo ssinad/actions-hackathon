@@ -40,14 +40,26 @@ jobs:
       with:
         name: artifacts
 
-    - name: Decrypt large secret
-      run: ./.github/scripts/decrypt_secret.sh
-      env:
-        LARGE_FILE_PASSPHRASE: ${{ secrets.LARGE_FILE_PASSPHRASE }}
+    # - name: Decrypt large secret
+    #   run: ./.github/scripts/decrypt_secret.sh
+    #   env:
+    #     LARGE_FILE_PASSPHRASE: ${{ secrets.LARGE_FILE_PASSPHRASE }}
 
+    # - name: Upload to Google Drive
+    #   env:
+    #     FILE_ID: ${{ secrets.FILE_ID }}
+    #   run: |
+    #     pip3 install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+    #     python3 ./gdrive-update.py $HOME/secrets/my_secret.json $FILE_ID  hello_world.pdf
+    
     - name: Upload to Google Drive
       env:
         FILE_ID: ${{ secrets.FILE_ID }}
-      run: |
-        pip3 install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
-        python3 ./gdrive-update.py $HOME/secrets/my_secret.json $FILE_ID  hello_world.pdf
+      uses: ssinad/gdrive-update-action@v1
+      with:
+        filename: 'hello_world.pdf'
+        file_id: $FILE_ID
+        my_secret: ${{ secrets.SERV_ACCT_JSON }}
+      # run: |
+      #   pip3 install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+      #   python3 ./gdrive-update.py $HOME/secrets/my_secret.json $FILE_ID  hello_world.pdf
