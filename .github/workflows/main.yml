@@ -55,12 +55,11 @@ jobs:
     - name: Upload to Google Drive
       env:
         FILE_ID: ${{ secrets.FILE_ID }}
-        SERV_ACCT_JSON: ${{ secrets.SERV_ACCT_JSON }}
       uses: ssinad/gdrive-update-action@main
       with:
         filename: 'hello_world.pdf'
         file_id: ${{ secrets.FILE_ID }}
-        my_secret: ${{ secrets.SERV_ACCT_JSON }} # secrets/my_secret.json
+        my_secret: secrets/my_secret.json
       # run: |
       #   pip3 install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
       #   python3 ./gdrive-update.py $HOME/secrets/my_secret.json $FILE_ID  hello_world.pdf
