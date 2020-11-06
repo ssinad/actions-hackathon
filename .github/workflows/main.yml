@@ -56,7 +56,7 @@ jobs:
       env:
         FILE_ID: ${{ secrets.FILE_ID }}
         SERV_ACCT_JSON: ${{ secrets.SERV_ACCT_JSON }}
-      uses: ssinad/gdrive-update-action@master
+      uses: ssinad/gdrive-update-action@main
       with:
         filename: 'hello_world.pdf'
         file_id: $FILE_ID
