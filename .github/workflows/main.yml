@@ -15,8 +15,8 @@ jobs:
     # - uses: actions/cache@v2
 
     - name: Compile Latex Documents
-      uses: ./
       id: typeset
+      uses: actions/typeset-action@v1
       with:
         file: 'hello_world'
 
