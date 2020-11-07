@@ -16,7 +16,7 @@ jobs:
 
     - name: Compile Latex Documents
       id: typeset
-      uses: ssinad/typeset-action@main
+      uses: ssinad/typeset-action@v2
       with:
         file: 'hello_world'
 
