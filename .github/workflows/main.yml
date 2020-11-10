@@ -52,4 +52,4 @@ jobs:
       with:
         filename: 'hello_world.pdf'
         file_id: ${{ secrets.FILE_ID }}
-        my_secret: secrets/my_secret.json
+        key_file: secrets/my_secret.json
