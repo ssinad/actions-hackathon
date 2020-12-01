@@ -7,7 +7,7 @@ on:
 
 jobs:
   compile:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v2
 
@@ -24,7 +24,7 @@ jobs:
           path: hello_world.pdf
   upload:
     needs: compile
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v2
     - name: Download Generated PDF
